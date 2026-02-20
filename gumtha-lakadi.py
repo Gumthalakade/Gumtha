@@ -79,11 +79,12 @@ def get_data(symbol, interval='1m'):
         return None
 
 def is_high_probability_time():
-    ist = pytz.timezone('Asia/Kolkata')
-    now = datetime.now(ist)
-    hour, minute = now.hour, now.minute
-    time_min = hour * 60 + minute
-    return (570 <= time_min <= 660) or (840 <= time_min <= 900)  # 9:30–11:00, 14:00–15:00
+#    ist = pytz.timezone('Asia/Kolkata')
+#    now = datetime.now(ist)
+#    hour, minute = now.hour, now.minute
+#    time_min = hour * 60 + minute
+#    return (570 <= time_min <= 660) or (840 <= time_min <= 900)  # 9:30–11:00, 14:00–15:00
+return True  # For testing, disable time check
 
 def evaluate_conditions(latest):
     """6 conditions for probability tiers."""
